@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Schedule | APU Wellness Fest 2026</title>
+  <meta name="description" content="Explore the full 3-day schedule for APU Wellness Fest 2026. Interactive filtering by day and category, plus instant CSV schedule download. Academic demonstration.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Master CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Master JavaScript -->
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- Academic Demonstration Banner -->
+  <div class="academic-notice">
+    <i class="fa-solid fa-graduation-cap"></i>
+    <span><strong>Academic Demonstration Project:</strong> Imaginary student event created for educational purposes only. Not an official APU activity.</span>
+  </div>
+
+  <!-- Master Navigation Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="dashboard.html" class="brand-logo" aria-label="APU Wellness Fest 2026 - Demo Dashboard" title="Demo Dashboard (Tap logo to open)">
+        <img src="images/apu-logo.svg" alt="APU Logo" class="brand-logo-img" width="46" height="46" onerror="this.onerror=null; this.src='images/apu-logo.png';">
+        <div class="brand-text">
+          <span class="brand-name">Wellness Fest</span>
+          <span class="brand-subtitle">Demo Dashboard <i class="fa-solid fa-gauge-high" style="font-size: 0.65rem; color: var(--primary);"></i></span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="schedule.html" class="nav-link active">Schedule</a>
+        <a href="activities.html" class="nav-link">Activities</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="news.html" class="nav-link">News</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="feedback.html" class="nav-link">Feedback</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="action-btn" id="themeToggleBtn" aria-label="Toggle Theme" title="Toggle Dark/Light Mode" data-tooltip="Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button type="button" class="action-btn" id="searchToggleBtn" aria-label="Search" title="Search Event" data-tooltip="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <a href="feedback.html" class="action-btn" aria-label="Feedback Survey" title="Feedback Survey" data-tooltip="Feedback Survey">
+          <i class="fa-solid fa-clipboard-check"></i>
+        </a>
+        <a href="dashboard.html" class="action-btn" id="navDashboardBtn" aria-label="Participant Dashboard" title="Participant Dashboard" data-tooltip="Dashboard">
+          <i class="fa-solid fa-gauge-high"></i>
+        </a>
+        <a href="login.html" class="action-btn" id="navLoginBtn" aria-label="Participant Login" title="Participant Login" data-tooltip="Login">
+          <i class="fa-regular fa-user"></i>
+        </a>
+        <a href="registration.html" class="btn btn-primary btn-sm">
+          <span>Register Now</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Open Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="section-tight" style="background: radial-gradient(circle at 10% 20%, rgba(2, 132, 199, 0.08) 0%, transparent 40%); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container text-center">
+      <span class="section-kicker">3-Day Program</span>
+      <h1 class="section-title">Event Schedule</h1>
+      <p class="section-desc" style="margin: 0 auto 1.5rem auto;">
+        Plan your festival itinerary across 3 immersive days of physical training, mindful pauses, nutrition discovery, and student community connection.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
+        <button type="button" class="btn btn-secondary btn-sm" id="downloadScheduleBtn">
+          <i class="fa-solid fa-file-arrow-down" style="color: var(--primary);"></i>
+          <span>Download Schedule (CSV)</span>
+        </button>
+        <button type="button" class="btn btn-outline btn-sm" onclick="window.print()">
+          <i class="fa-solid fa-print"></i>
+          <span>Print Schedule</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule Section -->
+  <section class="section">
+    <div class="container">
+      <!-- 5. Schedule Controls: Date Tabs & Category Filter -->
+      <div class="schedule-controls">
+        <!-- Date Tabs -->
+        <div class="date-tabs" role="tablist" aria-label="Event Days">
+          <button type="button" class="tab-btn active" data-day="day-1" role="tab" aria-selected="true">
+            <span class="tab-day">DAY 1 · 20 Nov</span>
+            <span class="tab-sub">Fitness & Nutrition</span>
+          </button>
+          <button type="button" class="tab-btn" data-day="day-2" role="tab" aria-selected="false">
+            <span class="tab-day">DAY 2 · 21 Nov</span>
+            <span class="tab-sub">Mental Wellness</span>
+          </button>
+          <button type="button" class="tab-btn" data-day="day-3" role="tab" aria-selected="false">
+            <span class="tab-day">DAY 3 · 22 Nov</span>
+            <span class="tab-sub">Community & Wellness</span>
+          </button>
+        </div>
+
+        <!-- Category Filter Bar -->
+        <div class="filter-bar" role="toolbar" aria-label="Category Filters">
+          <button type="button" class="filter-btn active" data-category="all">All</button>
+          <button type="button" class="filter-btn" data-category="fitness">Fitness</button>
+          <button type="button" class="filter-btn" data-category="nutrition">Nutrition</button>
+          <button type="button" class="filter-btn" data-category="mental-health">Mental Health</button>
+          <button type="button" class="filter-btn" data-category="yoga">Yoga</button>
+          <button type="button" class="filter-btn" data-category="community">Community</button>
+        </div>
+      </div>
+
+      <!-- Schedule Cards List -->
+      <div class="schedule-list" id="scheduleListContainer">
+
+        <!-- ==================== DAY 1 ACTIVITIES ==================== -->
+        <!-- 08:30 AM Opening Ceremony -->
+        <div class="schedule-card" data-day="day-1" data-category="community">
+          <div class="schedule-time">
+            08:30 AM
+            <small>45 mins</small>
+          </div>
+          <div class="schedule-details">
+            <div class="schedule-meta">
+              <span class="schedule-category">Community</span> · <span>Host: Student Affairs & Committee</span>
+            </div>
+            <h3 class="schedule-title">Opening Ceremony & Festival Keynote</h3>
+            <div class="schedule-location">
+              <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> APU Main Campus Atrium
+            </div>
+          </div>
+          <div class="schedule-cta">
+            <a href="registration.html" class="btn btn-outline btn-sm">Join</a>
+          </div>
+        </div>
+
+        <!-- 09:30 AM Campus Fitness Challenge -->
+        <div class="schedule-card" data-day="day-1" data-category="fitness">
+          <div class="schedule-time">
+            09:30 AM
+            <small>90 mins</small>
+          </div>
+          <div class="schedule-details">
+            <div class="schedule-meta">
+              <span class="schedule-category">Fitness</span> · <span>Host: APU Sports Club</span>
+            </div>
+            <h3 class="schedule-title">Campus Fitness Challenge</h3>
+            <div class="schedule-location">
+              <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> Sports Arena & Outdoor Track
+            </div>
+          </div>
+          <div class="schedule-cta">
+            <a href="registration.html?activity=Campus%20Fitness%20Challenge" class="btn btn-primary btn-sm">Register</a>
+          </div>
+        </div>
+
+        <!-- 11:00 AM Nutrition Workshop -->
+        <div class="schedule-card" data-day="day-1" data-category="nutrition">
+          <div class="schedule-time">
+            11:00 AM
+            <small>75 mins</small>
+          </div>
+          <div class="schedule-details">
+            <div class="schedule-meta">
+              <span class="schedule-category">Nutrition</span> · <span>Speaker: Ms. Michelle Chang (Clinical Dietitian)</span>
+            </div>
+            <h3 class="schedule-title">Practical Student Nutrition Workshop</h3>
+            <div class="schedule-location">
+              <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> Auditorium 2
+            </div>
+          </div>
+          <div class="schedule-cta">
+            <a href="registration.html?activity=Healthy%20Cooking%20Challenge" class="btn btn-outline btn-sm">RSVP</a>
+          </div>
+        </div>
+
+        <!-- 01:00 PM Vegan Food Exhibition -->
+        <div class="schedule-card" data-day="day-1" data-category="nutrition">
+          <div class="schedule-time">
+            01:00 PM
+            <small>2 hours</small>
+          </div>
+          <div class="schedule-details">
+            <div class="schedule-meta">
+              <span class="schedule-category">Nutrition</span> · <span>Host: Campus Culinary Guild</span>
+            </div>
+            <h3 class="schedule-title">Vegan & Plant-Based Food Exhibition</h3>
+            <div class="schedule-location">
+              <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> Central Courtyard Food Hub
+            </div>
+          </div>
+          <div class="schedule-cta">
+            <a href="activities.html" class="btn btn-outline btn-sm">View Details</a>
+          </div>
+        </div>
+
+        <!-- 03:00 PM Yoga Session -->
+        <div class="schedule-card" data-day="day-1" data-category="yoga">
+          <div class="schedule-time">
+            03:00 PM
+            <small>60 mins</small>
+          </div>
+          <div class="schedule-details">
+            <div class="schedule-meta">
+              <span class="schedule-category">Yoga</span> · <span>Instructor: Master Arjun Dev</span>
+            </div>
+            <h3 class="schedule-title">Outdoor Hatha Yoga & Breathwork</h3>
+            <div class="schedule-location">
+              <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> East Green Lawn
+            </div>
+          </div>
+          <div class="schedule-cta">
+            <a href="registration.html?activity=Outdoor%20Yoga%20%26%20Meditation" class="btn btn-primary btn-sm">Register</a>
+          </div>
+        </div>
+
+        <!-- 04:30 PM Mental Health Awareness Talk -->
+        <div class="schedule-card" data-day="day-1" data-category="mental-health">
+          <div class="schedule-time">
+            04:30 PM
+            <small>75 mins</small>
+          </div>
+          <div class="schedule-details">
+            <div class="schedule-meta">
+              <span class="schedule-category">Mental Health</span> · <span>Host: Student Wellbeing Ambassadors</span>
+            </div>
+            <h3 class="schedule-title">Mental Health Awareness Talk: Student Voices</h3>
+            <div class="schedule-location">
+              <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> Lecture Hall 1
+            </div>
+          </div>
+          <div class="schedule-cta">
+            <a href="registration.html?activity=Mental%20Health%20Awareness" class="btn btn-outline btn-sm">RSVP</a>
+          </div>
+        </div>
+
+        <!-- 06:00 PM Meditation & Closing -->
+        <div class="schedule-card" data-day="day-1" data-category="yoga">
+          <div class="schedule-time">
+            06:00 PM
+            <small>45 mins</small>
+          </div>
+          <div class="schedule-details">
+            <div class="schedule-meta">
+              <span class="schedule-category">Yoga</span> · <span>Host: Mindful Campus Initiative</span>
+            </div>
+            <h3 class="schedule-title">Sunset Guided Meditation & Sound Healing</h3>
+            <div class="schedule-location">
+              <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> East Green Lawn
+            </div>
+          </div>
+          <div class="schedule-cta">
+            <a href="activities.html" class="btn btn-outline btn-sm">Details</a>
+          </div>
+        </div>
+
+        <!-- ==================== DAY 2 ACTIVITIES ==================== -->
+        <!-- 09:00 AM 5K Wellness Walk -->
+        <div class="schedule-card" data-day="day-2" data-category="fitness">
+          <div class="schedule-time">
+            09:00 AM
+            <small>90 mins</small>
+          </div>
+          <div class="schedule-details">
+            <div class="schedule-meta">
+              <span class="schedule-category">Fitness</span> · <span>Host: Campus Running Club</span>
+            </div>
+            <h3 class="schedule-title">5K Campus Wellness Walk & Run</h3>
+            <div class="schedule-location">
+              <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> Flag-off: Main Atrium
+            </div>
+          </div>
+          <div class="schedule-cta">
+            <a href="registration.html?activity=5K%20Campus%20Wellness%20Walk" class="btn btn-primary btn-sm">Register</a>
+          </div>
+        </div>
+
+        <!-- 11:00 AM Overcoming Academic Burnout -->
+        <div class="schedule-card" data-day="day-2" data-category="mental-health">
+          <div class="schedule-time">
+            11:00 AM
+            <small>60 mins</small>
+          </div>
+          <div class="schedule-details">
+            <div class="schedule-meta">
+              <span class="schedule-category">Mental Health</span> · <span>Speaker: Dr. Kenneth Wong, Psychologist</span>
+            </div>
+            <h3 class="schedule-title">Overcoming Academic Burnout Seminar</h3>
+            <div class="schedule-location">
+              <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> Auditorium 1
+            </div>
+          </div>
+          <div class="schedule-cta">
+            <a href="registration.html?activity=Mindfulness%20%26%20Stress%20Management" class="btn btn-outline btn-sm">RSVP</a>
+          </div>
+        </div>
+
+        <!-- 01:30 PM Cooking Challenge -->
+        <div class="schedule-card" data-day="day-2" data-category="nutrition">
+          <div class="schedule-time">
+            01:30 PM
+            <small>2 hours</small>
+          </div>
+          <div class="schedule-details">
+            <div class="schedule-meta">
+              <span class="schedule-category">Nutrition</span> · <span>Judge: Chef Nadira Azman</span>
+            </div>
+            <h3 class="schedule-title">Healthy Student Cooking Challenge</h3>
+            <div class="schedule-location">
+              <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> Culinary Demo Lab 3
+            </div>
+          </div>
+          <div class="schedule-cta">
+            <a href="registration.html?activity=Healthy%20Cooking%20Challenge" class="btn btn-primary btn-sm">Register</a>
+          </div>
+        </div>
+
+        <!-- 03:30 PM Vinyasa Flow -->
+        <div class="schedule-card" data-day="day-2" data-category="yoga">
+          <div class="schedule-time">
+            03:30 PM
+            <small>60 mins</small>
+          </div>
+          <div class="schedule-details">
+            <div class="schedule-meta">
+              <span class="schedule-category">Yoga</span> · <span>Instructor: Coach Sofia Lee</span>
+            </div>
+            <h3 class="schedule-title">Vinyasa Flow & Dynamic Flexibility</h3>
+            <div class="schedule-location">
+              <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> Wellness Pavilion
+            </div>
+          </div>
+          <div class="schedule-cta">
+            <a href="registration.html?activity=Outdoor%20Yoga%20%26%20Meditation" class="btn btn-outline btn-sm">RSVP</a>
+          </div>
+        </div>
+
+        <!-- 05:00 PM Wellness Trivia -->
+        <div class="schedule-card" data-day="day-2" data-category="community">
+          <div class="schedule-time">
+            05:00 PM
+            <small>60 mins</small>
+          </div>
+          <div class="schedule-details">
+            <div class="schedule-meta">
+              <span class="schedule-category">Community</span> · <span>Host: Peer Mentoring Society</span>
+            </div>
+            <h3 class="schedule-title">Wellness Trivia & Interactive Digital Quiz</h3>
+            <div class="schedule-location">
+              <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> Student Hub Lounge
+            </div>
+          </div>
+          <div class="schedule-cta">
+            <a href="registration.html?activity=Campus%20Wellness%20Quiz" class="btn btn-outline btn-sm">Join</a>
+          </div>
+        </div>
+
+        <!-- ==================== DAY 3 ACTIVITIES ==================== -->
+        <!-- 09:00 AM Blood Donation Drive -->
+        <div class="schedule-card" data-day="day-3" data-category="community">
+          <div class="schedule-time">
+            09:00 AM
+            <small>All day</small>
+          </div>
+          <div class="schedule-details">
+            <div class="schedule-meta">
+              <span class="schedule-category">Community</span> · <span>National Blood Centre & Red Crescent</span>
+            </div>
+            <h3 class="schedule-title">National Voluntary Blood Donation Drive</h3>
+            <div class="schedule-location">
+              <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> Multi-Purpose Hall A
+            </div>
+          </div>
+          <div class="schedule-cta">
+            <a href="registration.html?activity=National%20Blood%20Donation%20Drive" class="btn btn-primary btn-sm">Pledge</a>
+          </div>
+        </div>
+
+        <!-- 11:30 AM Mindfulness & Exam Stress -->
+        <div class="schedule-card" data-day="day-3" data-category="mental-health">
+          <div class="schedule-time">
+            11:30 AM
+            <small>75 mins</small>
+          </div>
+          <div class="schedule-details">
+            <div class="schedule-meta">
+              <span class="schedule-category">Mental Health</span> · <span>Counseling & Wellbeing Team</span>
+            </div>
+            <h3 class="schedule-title">Mindfulness & Exam Stress Mastery</h3>
+            <div class="schedule-location">
+              <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> Auditorium 3
+            </div>
+          </div>
+          <div class="schedule-cta">
+            <a href="registration.html?activity=Exam%20Stress%20Mastery" class="btn btn-outline btn-sm">RSVP</a>
+          </div>
+        </div>
+
+        <!-- 01:00 PM Sound Bath -->
+        <div class="schedule-card" data-day="day-3" data-category="mental-health">
+          <div class="schedule-time">
+            01:00 PM
+            <small>60 mins</small>
+          </div>
+          <div class="schedule-details">
+            <div class="schedule-meta">
+              <span class="schedule-category">Mental Health</span> · <span>Therapist: Clara Siew</span>
+            </div>
+            <h3 class="schedule-title">Exam Stress Mastery & Sound Bath</h3>
+            <div class="schedule-location">
+              <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> Wellness Pavilion
+            </div>
+          </div>
+          <div class="schedule-cta">
+            <a href="activities.html" class="btn btn-outline btn-sm">Details</a>
+          </div>
+        </div>
+
+        <!-- 02:30 PM Calisthenics Exhibition -->
+        <div class="schedule-card" data-day="day-3" data-category="fitness">
+          <div class="schedule-time">
+            02:30 PM
+            <small>60 mins</small>
+          </div>
+          <div class="schedule-details">
+            <div class="schedule-meta">
+              <span class="schedule-category">Fitness</span> · <span>APU Calisthenics Ambassadors</span>
+            </div>
+            <h3 class="schedule-title">Calisthenics & Functional Strength Showcase</h3>
+            <div class="schedule-location">
+              <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> Sports Arena
+            </div>
+          </div>
+          <div class="schedule-cta">
+            <a href="activities.html" class="btn btn-outline btn-sm">Details</a>
+          </div>
+        </div>
+
+        <!-- 04:30 PM Closing Awards Ceremony -->
+        <div class="schedule-card" data-day="day-3" data-category="community">
+          <div class="schedule-time">
+            04:30 PM
+            <small>90 mins</small>
+          </div>
+          <div class="schedule-details">
+            <div class="schedule-meta">
+              <span class="schedule-category">Community</span> · <span>Executive Committee</span>
+            </div>
+            <h3 class="schedule-title">Closing Awards & Celebration Ceremony</h3>
+            <div class="schedule-location">
+              <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> Main Campus Atrium
+            </div>
+          </div>
+          <div class="schedule-cta">
+            <a href="registration.html" class="btn btn-outline btn-sm">Attend</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- Newsletter Subscription Section -->
+      <div class="footer-newsletter-box">
+        <div class="footer-newsletter-content">
+          <div class="newsletter-icon-wrap">
+            <i class="fa-regular fa-paper-plane"></i>
+          </div>
+          <div>
+            <h3 class="newsletter-title">Subscribe for Event Updates</h3>
+            <p class="newsletter-desc">Get the latest schedule alerts, speaker reveals, wellness workshop reminders, and festival announcements sent to your student email.</p>
+          </div>
+        </div>
+        <form class="footer-newsletter-form" novalidate>
+          <div class="newsletter-input-group">
+            <i class="fa-regular fa-envelope newsletter-field-icon"></i>
+            <input type="email" class="newsletter-input" placeholder="Enter student email (e.g. name@mail.apu.edu.my)" required aria-label="Student Email for Event Updates">
+            <button type="submit" class="btn btn-primary newsletter-btn">
+              <span>Subscribe</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="newsletter-message" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 1rem;">
+            <img src="images/apu-logo.svg" alt="APU Logo" class="brand-logo-img" width="46" height="46" onerror="this.onerror=null; this.src='images/apu-logo.png';">
+            <div class="brand-text">
+              <span class="brand-name">Wellness Fest</span>
+              <span class="brand-subtitle">November 2026</span>
+            </div>
+          </div>
+          <p style="font-weight: 600; color: var(--text-main); margin-bottom: 0.5rem;">
+            “Move Better. Live Healthier. Feel Stronger.”
+          </p>
+          <p>
+            An imaginary student health and wellbeing platform created for an academic web development team assignment.
+          </p>
+          <div class="footer-social-links">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="activities.html">Activities</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <div class="footer-links">
+            <a href="resources.html">Participant Guide</a>
+            <a href="schedule.html">Event Schedule</a>
+            <a href="activities.html">Activity Rules</a>
+            <a href="feedback.html">Feedback Survey</a>
+            <a href="login.html">Demo Dashboard</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Event Venue</h4>
+          <p style="font-size: 0.88rem; line-height: 1.6; margin-bottom: 0.5rem;">
+            <strong>LBEF Campus (APU Partner)</strong><br>
+            Maitidevi Marg, Maitidevi<br>
+            Kathmandu 44600, Nepal
+          </p>
+          <p style="margin-bottom: 0.75rem;">
+            <a href="https://www.google.com/maps/search/?api=1&query=LBEF+Campus+Maitidevi+Kathmandu" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.8rem; color: var(--primary); font-weight: 600; text-decoration: none;">
+              <i class="fa-solid fa-map-location-dot"></i> View on Google Maps
+            </a>
+          </p>
+          <p style="font-size: 0.85rem; color: var(--primary); font-weight: 600;">
+            <i class="fa-regular fa-calendar"></i> 20–22 Nov 2026
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 APU Wellness Fest – Academic Demonstration Project.
+        </div>
+        <div class="footer-academic-alert">
+          Imaginary Event – Not an Official APU Activity
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal Overlay -->
+  <div class="search-modal-backdrop" id="searchModal" role="dialog" aria-modal="true" aria-label="Search Festival Portal">
+    <div class="search-modal-content">
+      <div class="search-input-header">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="Search activities, schedule, FAQs, news..." autocomplete="off">
+        <button type="button" class="search-close-btn" id="searchCloseBtn" aria-label="Close search">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="search-results-list" id="searchResults"></div>
+    </div>
+  </div>
+
+  <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+</body>
+</html>

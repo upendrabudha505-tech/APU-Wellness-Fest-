@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" width="100%" height="100%">
+  <defs>
+    <!-- Globe Gradient -->
+    <radialGradient id="globeGrad" cx="38%" cy="32%" r="65%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="50%" stop-color="#1d4ed8" />
+      <stop offset="85%" stop-color="#2e1065" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </radialGradient>
+    <!-- Continent Fill -->
+    <radialGradient id="landGrad" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#22c55e" />
+      <stop offset="80%" stop-color="#15803d" />
+      <stop offset="100%" stop-color="#14532d" />
+    </radialGradient>
+    <!-- Orbit Glow -->
+    <linearGradient id="orbitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#ca8a04" />
+    </linearGradient>
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#ca8a04" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Central Globe -->
+  <g id="globeGroup">
+    <circle cx="140" cy="95" r="54" fill="url(#globeGrad)" />
+    
+    <!-- Continents Map silhouettes inside globe mask -->
+    <clipPath id="globeClip">
+      <circle cx="140" cy="95" r="54" />
+    </clipPath>
+    
+    <g clip-path="url(#globeClip)" fill="url(#landGrad)" opacity="0.95">
+      <!-- Asia / Malaysia peninsula / Islands -->
+      <path d="M 125,65 Q 145,55 160,70 Q 155,85 140,88 Q 132,95 138,105 Q 128,115 120,105 Q 115,90 125,80 Z" />
+      <path d="M 148,88 Q 165,92 170,105 Q 162,118 150,112 Q 142,100 148,88 Z" />
+      <path d="M 110,95 Q 118,100 115,110 Q 105,108 110,95 Z" />
+      <path d="M 152,60 Q 168,52 178,65 Q 170,75 158,68 Z" />
+      <path d="M 105,70 Q 118,62 120,74 Q 110,80 105,70 Z" />
+      <!-- Australia / South East Asia islands -->
+      <circle cx="162" cy="125" r="10" />
+      <circle cx="146" cy="120" r="5" />
+      <circle cx="132" cy="126" r="6" />
+    </g>
+    <!-- Globe Atmosphere Highlight -->
+    <ellipse cx="126" cy="74" rx="26" ry="16" fill="#ffffff" opacity="0.15" />
+  </g>
+
+  <!-- Three Golden Orbital Rings -->
+  <!-- Ring 1: Horizontal / slight angle -->
+  <ellipse cx="140" cy="95" rx="78" ry="24" fill="none" stroke="url(#orbitGrad)" stroke-width="4.5" transform="rotate(-6 140 95)" filter="url(#subtleGlow)" />
+  <!-- Ring 2: Diagonal Left -->
+  <ellipse cx="140" cy="95" rx="78" ry="24" fill="none" stroke="url(#orbitGrad)" stroke-width="4.5" transform="rotate(56 140 95)" filter="url(#subtleGlow)" />
+  <!-- Ring 3: Diagonal Right -->
+  <ellipse cx="140" cy="95" rx="78" ry="24" fill="none" stroke="url(#orbitGrad)" stroke-width="4.5" transform="rotate(-56 140 95)" filter="url(#subtleGlow)" />
+
+  <!-- Typography -->
+  <!-- A · P · U -->
+  <text x="56" y="210" font-family="'Outfit', 'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="34" fill="#0f172a" letter-spacing="4">A</text>
+  <rect x="94" y="196" width="7" height="7" fill="#dc2626" rx="1" />
+  <text x="120" y="210" font-family="'Outfit', 'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="34" fill="#0f172a" letter-spacing="4">P</text>
+  <rect x="164" y="196" width="7" height="7" fill="#dc2626" rx="1" />
+  <text x="188" y="210" font-family="'Outfit', 'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="34" fill="#0f172a" letter-spacing="4">U</text>
+
+  <!-- Red Accent Divider Line -->
+  <line x1="28" y1="222" x2="252" y2="222" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Subtitle Text -->
+  <text x="140" y="238" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="10.5" fill="#0f172a" text-anchor="middle" letter-spacing="1.2">ASIA PACIFIC UNIVERSITY</text>
+  <text x="140" y="252" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="9" fill="#0f172a" text-anchor="middle" letter-spacing="1">OF TECHNOLOGY &amp; INNOVATION</text>
+</svg>

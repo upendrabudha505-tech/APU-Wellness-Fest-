@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APU Wellness Fest 2026 | Move Better. Live Healthier. Feel Stronger.</title>
+  <meta name="description" content="APU Wellness Fest 2026 - A student-centered health and wellness experience featuring fitness challenges, yoga, nutrition, and mental health awareness. Academic demonstration project.">
+  <meta property="og:title" content="APU Wellness Fest 2026">
+  <meta property="og:description" content="Move Better. Live Healthier. Feel Stronger. Academic demonstration website for APU Wellness Fest 2026 student event.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Master CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Master JavaScript -->
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- Academic Demonstration Banner -->
+  <div class="academic-notice">
+    <i class="fa-solid fa-graduation-cap"></i>
+    <span><strong>Academic Demonstration Project:</strong> Imaginary student event created for educational purposes only. Not an official APU activity.</span>
+  </div>
+
+  <!-- Master Navigation Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <!-- Zone 1: Brand Wordmark -->
+      <a href="dashboard.html" class="brand-logo" aria-label="APU Wellness Fest 2026 - Demo Dashboard" title="Demo Dashboard (Tap logo to open)">
+        <img src="images/apu-logo.svg" alt="APU Logo" class="brand-logo-img" width="46" height="46" onerror="this.onerror=null; this.src='images/apu-logo.png';">
+        <div class="brand-text">
+          <span class="brand-name">Wellness Fest</span>
+          <span class="brand-subtitle">Demo Dashboard <i class="fa-solid fa-gauge-high" style="font-size: 0.65rem; color: var(--primary);"></i></span>
+        </div>
+      </a>
+
+      <!-- Zone 2: Navigation Links -->
+      <nav class="main-nav" id="mainNav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="schedule.html" class="nav-link">Schedule</a>
+        <a href="activities.html" class="nav-link">Activities</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="news.html" class="nav-link">News</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="feedback.html" class="nav-link">Feedback</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <!-- Zone 3: Header Actions -->
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button type="button" class="action-btn" id="themeToggleBtn" aria-label="Toggle Theme" title="Toggle Dark/Light Mode" data-tooltip="Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <!-- Search Icon -->
+        <button type="button" class="action-btn" id="searchToggleBtn" aria-label="Search" title="Search Event" data-tooltip="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+        <!-- Feedback Survey Icon -->
+        <a href="feedback.html" class="action-btn" aria-label="Feedback Survey" title="Feedback Survey" data-tooltip="Feedback Survey">
+          <i class="fa-solid fa-clipboard-check"></i>
+        </a>
+
+        <!-- Participant Dashboard Icon -->
+        <a href="dashboard.html" class="action-btn" id="navDashboardBtn" aria-label="Participant Dashboard" title="Participant Dashboard" data-tooltip="Dashboard">
+          <i class="fa-solid fa-gauge-high"></i>
+        </a>
+
+        <!-- Profile / Demo Login -->
+        <a href="login.html" class="action-btn" id="navLoginBtn" aria-label="Participant Login" title="Participant Login" data-tooltip="Login">
+          <i class="fa-regular fa-user"></i>
+        </a>
+
+        <!-- Register Now Button -->
+        <a href="registration.html" class="btn btn-primary btn-sm">
+          <span>Register Now</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Open Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-tagline-kicker">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <span>APU Student Experience · Academic Demo</span>
+          </div>
+          <h1 class="hero-title">
+            APU WELLNESS <span>FEST 2026</span>
+          </h1>
+          <p class="hero-tagline">“Move Better. Live Healthier. Feel Stronger.”</p>
+          <p class="hero-desc">
+            A vibrant student-centered health and wellness experience featuring fitness challenges, yoga immersions, nutrition workshops, mental health awareness dialogues, and uplifting campus community activities.
+          </p>
+          <div class="hero-cta">
+            <a href="activities.html" class="btn btn-primary btn-lg">
+              <span>Explore Event</span>
+              <i class="fa-solid fa-compass"></i>
+            </a>
+            <a href="registration.html" class="btn btn-secondary btn-lg">
+              <span>Register Now</span>
+              <i class="fa-solid fa-user-plus"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-media-wrapper">
+          <div class="hero-image-frame">
+            <img src="images/hero.jpg" alt="University students enjoying outdoor fitness and wellness activities at APU Wellness Fest" loading="lazy">
+          </div>
+
+          <!-- Small Floating Event Card -->
+          <div class="floating-event-card">
+            <div class="f-item">
+              <span class="f-label"><i class="fa-regular fa-calendar" style="color: var(--primary);"></i> Date</span>
+              <span class="f-val">20–22 November 2026</span>
+            </div>
+            <div class="f-item">
+              <span class="f-label"><i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> Location</span>
+              <span class="f-val">LBEF Campus, Maitidevi, Kathmandu</span>
+            </div>
+            <div class="f-item">
+              <span class="f-label"><i class="fa-solid fa-shapes" style="color: var(--primary);"></i> Event Type</span>
+              <span class="f-val">Student Wellness Festival</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Countdown Timer Bar -->
+  <section class="countdown-section" aria-label="Event Countdown">
+    <div class="container">
+      <div class="countdown-bar">
+        <div class="countdown-meta">
+          <h3>Festival Countdown</h3>
+          <p>Mark your calendar for November 20, 2026 · LBEF Campus, Maitidevi, Kathmandu</p>
+        </div>
+        <div class="countdown-grid">
+          <div class="countdown-unit">
+            <div class="countdown-number" id="countdownDays">00</div>
+            <div class="countdown-label">Days</div>
+          </div>
+          <div class="countdown-unit">
+            <div class="countdown-number" id="countdownHours">00</div>
+            <div class="countdown-label">Hours</div>
+          </div>
+          <div class="countdown-unit">
+            <div class="countdown-number" id="countdownMinutes">00</div>
+            <div class="countdown-label">Minutes</div>
+          </div>
+          <div class="countdown-unit">
+            <div class="countdown-number" id="countdownSeconds">00</div>
+            <div class="countdown-label">Seconds</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Quick Highlights (6 Interactive Cards) -->
+  <section class="section" id="highlights">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">Core Pillars</span>
+        <h2 class="section-title">Quick Highlights</h2>
+        <p class="section-desc">
+          Explore six signature wellness avenues thoughtfully curated to energize your body, center your mind, and foster lasting healthy lifestyle habits.
+        </p>
+      </div>
+
+      <div class="cards-grid-3">
+        <!-- 1. Fitness Challenge -->
+        <div class="highlight-card">
+          <div class="card-icon-box">
+            <i class="fa-solid fa-dumbbell"></i>
+          </div>
+          <h3 class="card-title">Fitness Challenge</h3>
+          <p class="card-text">“Test your strength, stamina and teamwork across multi-stage obstacle courses and team sprint relays.”</p>
+          <a href="activities.html" class="card-action-link">
+            <span>Learn More</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- 2. Yoga & Meditation -->
+        <div class="highlight-card">
+          <div class="card-icon-box">
+            <i class="fa-solid fa-spa"></i>
+          </div>
+          <h3 class="card-title">Yoga & Meditation</h3>
+          <p class="card-text">“Relax your mind and improve your wellbeing with revitalizing open-air Vinyasa flows and sound bath meditations.”</p>
+          <a href="activities.html" class="card-action-link">
+            <span>Learn More</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- 3. Nutrition Classes -->
+        <div class="highlight-card">
+          <div class="card-icon-box">
+            <i class="fa-solid fa-apple-whole"></i>
+          </div>
+          <h3 class="card-title">Nutrition Classes</h3>
+          <p class="card-text">“Learn practical healthy eating habits, dorm-friendly meal prep hacks, and nutrient-dense culinary recipes.”</p>
+          <a href="activities.html" class="card-action-link">
+            <span>Learn More</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- 4. Mental Health Awareness -->
+        <div class="highlight-card">
+          <div class="card-icon-box">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h3 class="card-title">Mental Health Awareness</h3>
+          <p class="card-text">“Open conversations about student wellbeing, emotional resilience, overcoming burnout, and campus support networks.”</p>
+          <a href="activities.html" class="card-action-link">
+            <span>Learn More</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- 5. Vegan Food Exhibition -->
+        <div class="highlight-card">
+          <div class="card-icon-box">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <h3 class="card-title">Vegan Food Exhibition</h3>
+          <p class="card-text">“Explore healthy and sustainable food with artisan plant-based tastings, chef showcases, and sustainable living tips.”</p>
+          <a href="activities.html" class="card-action-link">
+            <span>Learn More</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- 6. Blood Donation Drive -->
+        <div class="highlight-card">
+          <div class="card-icon-box">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+          </div>
+          <h3 class="card-title">Blood Donation Drive</h3>
+          <p class="card-text">“Support the community through voluntary donation in partnership with the National Blood Centre and Youth Red Crescent.”</p>
+          <a href="activities.html" class="card-action-link">
+            <span>Learn More</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. About Snapshot & Statistics -->
+  <section class="section" style="background-color: var(--bg-surface);">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <span class="section-kicker">Our Mission</span>
+          <h2 class="section-title">Why APU Wellness Fest?</h2>
+          <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem; color: var(--text-muted);">
+            This imaginary student event is designed to encourage students to develop healthier physical, mental, and social habits while building a stronger campus community.
+          </p>
+          <p style="font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem; color: var(--text-muted);">
+            University life is intellectually demanding. APU Wellness Fest 2026 creates a welcoming, judgment-free environment where students can pause, reset their circadian rhythms, learn nutritious habits, and engage in energizing physical pursuits alongside peers and mentors.
+          </p>
+          <a href="about.html" class="btn btn-outline">
+            <span>Read Full About Story</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div>
+          <img src="images/nutrition.jpg" alt="Students preparing fresh nutritious fruit bowls" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-md); width: 100%; height: 380px; object-fit: cover;" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Statistics Banner -->
+      <div class="stats-banner">
+        <div class="stat-item">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Expected Participants</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">15+</div>
+          <div class="stat-label">Wellness Activities</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Student Volunteers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">3</div>
+          <div class="stat-label">Event Days</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Fictional Organizing Committee Snapshot -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">Leadership</span>
+        <h2 class="section-title">Organizing Committee</h2>
+        <p class="section-desc">
+          Meet the dedicated student leaders orchestrating the festival. Please note these are fictional organizers created for academic demonstration.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <!-- Sarah Lim -->
+        <div class="team-card">
+          <div class="team-avatar-box">
+            <i class="fa-solid fa-user-graduate"></i>
+          </div>
+          <h3 class="team-name">Sarah Lim</h3>
+          <div class="team-pos">Event Director</div>
+          <div class="team-fictional-tag">Fictional Student Organizer</div>
+          <div class="team-socials">
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- Daniel Tan -->
+        <div class="team-card">
+          <div class="team-avatar-box">
+            <i class="fa-solid fa-user-tie"></i>
+          </div>
+          <h3 class="team-name">Daniel Tan</h3>
+          <div class="team-pos">Wellness Coordinator</div>
+          <div class="team-fictional-tag">Fictional Student Organizer</div>
+          <div class="team-socials">
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- Aisha Rahman -->
+        <div class="team-card">
+          <div class="team-avatar-box">
+            <i class="fa-solid fa-user-astronaut"></i>
+          </div>
+          <h3 class="team-name">Aisha Rahman</h3>
+          <div class="team-pos">Student Activities Lead</div>
+          <div class="team-fictional-tag">Fictional Student Organizer</div>
+          <div class="team-socials">
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- Jason Lee -->
+        <div class="team-card">
+          <div class="team-avatar-box">
+            <i class="fa-solid fa-user-ninja"></i>
+          </div>
+          <h3 class="team-name">Jason Lee</h3>
+          <div class="team-pos">Media & Communications</div>
+          <div class="team-fictional-tag">Fictional Student Organizer</div>
+          <div class="team-socials">
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. Imaginary Sponsors & Partners -->
+  <section class="section-tight" style="background: var(--bg-surface); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container text-center">
+      <p style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-subtle); margin-bottom: 0.5rem;">
+        Imaginary Sponsors Created For Academic Demonstration
+      </p>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-top: 1.5rem; opacity: 0.85;">
+        <div style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 800; color: var(--text-main); display: flex; align-items: center; gap: 0.5rem;">
+          <i class="fa-solid fa-heart" style="color: var(--primary);"></i> WellLife
+        </div>
+        <div style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 800; color: var(--text-main); display: flex; align-items: center; gap: 0.5rem;">
+          <i class="fa-solid fa-bolt" style="color: var(--secondary);"></i> FitNation
+        </div>
+        <div style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 800; color: var(--text-main); display: flex; align-items: center; gap: 0.5rem;">
+          <i class="fa-solid fa-leaf" style="color: #10b981;"></i> GreenBite
+        </div>
+        <div style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 800; color: var(--text-main); display: flex; align-items: center; gap: 0.5rem;">
+          <i class="fa-solid fa-brain" style="color: var(--accent-purple);"></i> MindCare
+        </div>
+        <div style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 800; color: var(--text-main); display: flex; align-items: center; gap: 0.5rem;">
+          <i class="fa-solid fa-person-running" style="color: var(--accent-amber);"></i> Active Campus
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Campus Venue & Map Location Section -->
+  <section class="section" style="background: var(--bg-surface-elevated); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 2.5rem;">
+        <span class="section-kicker">Festival Location</span>
+        <h2 class="section-title">Event Venue & Campus Map</h2>
+        <p class="section-desc" style="margin: 0 auto;">
+          APU Wellness Fest 2026 takes place at the LBEF Campus in Maitidevi, Kathmandu, Nepal.
+        </p>
+      </div>
+
+      <div class="cards-grid-2" style="align-items: center; gap: 2.5rem;">
+        <!-- Location Information Card -->
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2.25rem; box-shadow: var(--shadow-sm);">
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--primary-light); color: var(--primary); padding: 0.35rem 0.75rem; border-radius: 4px; font-weight: 700; font-size: 0.78rem; text-transform: uppercase; margin-bottom: 1rem;">
+            <i class="fa-solid fa-graduation-cap"></i> Host Campus Venue
+          </div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-main);">
+            LBEF CAMPUS (Lord Buddha Education Foundation)
+          </h3>
+          <p style="color: var(--primary); font-weight: 700; font-size: 0.95rem; margin-bottom: 1rem;">
+            In Academic Collaboration with Asia Pacific University (APU)
+          </p>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.65; margin-bottom: 1.5rem;">
+            Experience three days of interactive wellness seminars, outdoor fitness zones, yoga pavilions, and community nutrition workshops at the heart of Kathmandu.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+              <i class="fa-solid fa-location-dot" style="color: var(--primary); font-size: 1.1rem; margin-top: 0.2rem;"></i>
+              <div>
+                <strong style="color: var(--text-main); font-size: 0.92rem;">Address:</strong>
+                <div style="color: var(--text-muted); font-size: 0.88rem;">Maitidevi Marg, Opposite Maitidevi Temple, Maitidevi, Kathmandu 44600, Nepal</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+              <i class="fa-solid fa-landmark" style="color: var(--secondary); font-size: 1.1rem; margin-top: 0.2rem;"></i>
+              <div>
+                <strong style="color: var(--text-main); font-size: 0.92rem;">Prominent Landmark:</strong>
+                <div style="color: var(--text-muted); font-size: 0.88rem;">Maitidevi Chowk · Seto Pul · Near Putalisadak & Old Baneshwor</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+              <i class="fa-solid fa-phone" style="color: #10b981; font-size: 1.1rem; margin-top: 0.2rem;"></i>
+              <div>
+                <strong style="color: var(--text-main); font-size: 0.92rem;">Campus Helpline:</strong>
+                <div style="color: var(--text-muted); font-size: 0.88rem;">+977 1-4424412 / +977 1-4411805</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <a href="https://www.google.com/maps/search/?api=1&query=LBEF+Campus+Maitidevi+Kathmandu" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <i class="fa-solid fa-diamond-turn-right"></i>
+              <span>Get Directions on Google Maps</span>
+            </a>
+            <a href="contact.html" class="btn btn-outline">
+              <i class="fa-regular fa-envelope"></i>
+              <span>Contact Organizers</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Map Embed Frame -->
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.25rem; box-shadow: var(--shadow-sm); overflow: hidden;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+            <span style="font-weight: 700; font-size: 0.9rem; color: var(--text-main); display: flex; align-items: center; gap: 0.5rem;">
+              <i class="fa-solid fa-map-pin" style="color: #ef4444;"></i> Google Maps – LBEF College Maitidevi
+            </span>
+            <span style="font-size: 0.75rem; color: var(--primary); font-weight: 600; background: var(--primary-light); padding: 0.2rem 0.55rem; border-radius: 4px;">
+              Live Interactive Map
+            </span>
+          </div>
+          <div style="position: relative; width: 100%; height: 380px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-subtle);">
+            <iframe
+              title="LBEF Campus Maitidevi Kathmandu Map"
+              src="https://maps.google.com/maps?q=Lord+Buddha+Education+Foundation+LBEF+Maitidevi+Kathmandu&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration Callout Banner -->
+  <section class="section">
+    <div class="container">
+      <div style="background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #0369a1 100%); color: #ffffff; border-radius: var(--radius-lg); padding: 4rem 2.5rem; text-align: center; box-shadow: var(--shadow-lg);">
+        <h2 style="color: #ffffff; font-size: clamp(2rem, 3.5vw, 2.75rem); margin-bottom: 1rem;">Ready to Begin Your Wellness Journey?</h2>
+        <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.1rem; max-width: 640px; margin: 0 auto 2.5rem auto;">
+          Free admission for all university students. Register now to claim your digital event pass and reserve spots in signature workshops.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="registration.html" class="btn btn-secondary btn-lg" style="background: #ffffff; color: #064e3b; font-weight: 700;">
+            <span>Register for Free</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="schedule.html" class="btn btn-outline btn-lg" style="border-color: #ffffff; color: #ffffff;">
+            <span>Explore 3-Day Schedule</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- Newsletter Subscription Section -->
+      <div class="footer-newsletter-box">
+        <div class="footer-newsletter-content">
+          <div class="newsletter-icon-wrap">
+            <i class="fa-regular fa-paper-plane"></i>
+          </div>
+          <div>
+            <h3 class="newsletter-title">Subscribe for Event Updates</h3>
+            <p class="newsletter-desc">Get the latest schedule alerts, speaker reveals, wellness workshop reminders, and festival announcements sent to your student email.</p>
+          </div>
+        </div>
+        <form class="footer-newsletter-form" novalidate>
+          <div class="newsletter-input-group">
+            <i class="fa-regular fa-envelope newsletter-field-icon"></i>
+            <input type="email" class="newsletter-input" placeholder="Enter student email (e.g. name@mail.apu.edu.my)" required aria-label="Student Email for Event Updates">
+            <button type="submit" class="btn btn-primary newsletter-btn">
+              <span>Subscribe</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="newsletter-message" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Tagline -->
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 1rem;">
+            <img src="images/apu-logo.svg" alt="APU Logo" class="brand-logo-img" width="46" height="46" onerror="this.onerror=null; this.src='images/apu-logo.png';">
+            <div class="brand-text">
+              <span class="brand-name">Wellness Fest</span>
+              <span class="brand-subtitle">November 2026</span>
+            </div>
+          </div>
+          <p style="font-weight: 600; color: var(--text-main); margin-bottom: 0.5rem;">
+            “Move Better. Live Healthier. Feel Stronger.”
+          </p>
+          <p>
+            An imaginary student health and wellbeing platform created for an academic web development team assignment.
+          </p>
+          <div class="footer-social-links">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="activities.html">Activities</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Resources -->
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <div class="footer-links">
+            <a href="resources.html">Participant Guide</a>
+            <a href="schedule.html">Event Schedule</a>
+            <a href="activities.html">Activity Rules</a>
+            <a href="feedback.html">Feedback Survey</a>
+            <a href="login.html">Demo Dashboard</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Event Info -->
+        <div class="footer-col">
+          <h4>Event Venue</h4>
+          <p style="font-size: 0.88rem; line-height: 1.6; margin-bottom: 0.5rem;">
+            <strong>LBEF Campus (APU Partner)</strong><br>
+            Maitidevi Marg, Maitidevi<br>
+            Kathmandu 44600, Nepal
+          </p>
+          <p style="margin-bottom: 0.75rem;">
+            <a href="https://www.google.com/maps/search/?api=1&query=LBEF+Campus+Maitidevi+Kathmandu" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.8rem; color: var(--primary); font-weight: 600; text-decoration: none;">
+              <i class="fa-solid fa-map-location-dot"></i> View on Google Maps
+            </a>
+          </p>
+          <p style="font-size: 0.85rem; color: var(--primary); font-weight: 600;">
+            <i class="fa-regular fa-calendar"></i> 20–22 Nov 2026
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 APU Wellness Fest – Academic Demonstration Project.
+        </div>
+        <div class="footer-academic-alert">
+          Imaginary Event – Not an Official APU Activity
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal Overlay -->
+  <div class="search-modal-backdrop" id="searchModal" role="dialog" aria-modal="true" aria-label="Search Festival Portal">
+    <div class="search-modal-content">
+      <div class="search-input-header">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="Search activities, schedule, FAQs, news..." autocomplete="off">
+        <button type="button" class="search-close-btn" id="searchCloseBtn" aria-label="Close search">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="search-results-list" id="searchResults">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll To Top Button -->
+  <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+</body>
+</html>

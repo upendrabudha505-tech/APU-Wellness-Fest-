@@ -1,0 +1,6 @@
+{
+  "name": "APU Wellness Fest 2026",
+  "description": "Move Better. Live Healthier. Feel Stronger. Academic demonstration website for APU Wellness Fest 2026 student event.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
